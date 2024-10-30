@@ -65,7 +65,7 @@ const Login = () => {
           <Oauth oauthImage={"/google.png"} oauth={"google"} />
           <Oauth oauthImage={"/twitter.png"} oauth={"twitter"} />
         </div>
-        <div className="justify-center md:pt-0 pt-4 pb-8 text-[#667185]">
+        <div className="justify-center md:pt-0 pt-4 pb-8 pr-2 text-[#667185]">
           {" "}
           Are you new here?{" "}
           <a href="/signup" className="text-[#0D5EBA]"> Create Account</a>

@@ -34,7 +34,7 @@ const PasswordInput = ({onPasswordChange = () => {}}: PasswordInputProps) => {
         src={isPasswordVisible ? "/visible.jpg" : "/hidden.png"}
         alt={isPasswordVisible ? "Hide password" : "Show password"}
         onClick={togglePasswordVisibility}
-        className="absolute right-0 top-[22px] mx-2"
+        className="absolute right-0 top-[22px] mx-4"
         height="15"
         width="18"
       />
