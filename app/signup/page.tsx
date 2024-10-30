@@ -9,7 +9,7 @@ import { Feedback, FeedbackType } from "@/app/components/Feedback";
 import {
   validatePassword,
   validateConfirmPassword,
-} from "@/app/utils/passwordValidation"; // Import validation functions
+} from "@/app/utils/passwordValidation";
 
 const Signup = () => {
   const [isDisabled, setIsDisabled] = useState<boolean>(false);
@@ -84,10 +84,10 @@ const Signup = () => {
             )}
           </button>
         </form>
-        <div className="w-[80%]">
-          {checking && <Feedback feedback={feedback} />}
+        <div className="w-[80%] py-2">
+          {checking && (<Feedback feedback={feedback} />)}
         </div>
-        <div className="flex flex-col w-[80%] py-2 md:gap-y-[15px] gap-y-2">
+        <div className="flex flex-col w-[80%] md:gap-y-[15px] gap-y-2">
           <Oauth oauthImage="/google.png" oauth="google" />
           <Oauth oauthImage="/twitter.png" oauth="twitter" />
         </div>
