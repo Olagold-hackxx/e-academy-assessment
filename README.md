@@ -64,9 +64,9 @@ Your work will be evaluated on:
 ├── public
 │   ├── logo.png
 │   └── ...
-├── tests
-│   ├── Login.test.tsx
-│   └── Signup.test.tsx
+├── __tests__
+│   ├── login.test.tsx
+│   └── signup.test.tsx
 ├── package.json
 ├── tsconfig.json
 └── vercel.json
