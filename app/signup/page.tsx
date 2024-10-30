@@ -1,15 +1,15 @@
 "use client";
 
-import Input from "@/components/Input";
-import PasswordInput from "@/components/PasswordInput";
-import Oauth from "@/components/Oauth";
+import Input from "@/app/components/Input";
+import PasswordInput from "@/app/components/PasswordInput";
+import Oauth from "@/app/components/Oauth";
 import { useState } from "react";
 import Image from "next/image";
-import { Feedback, FeedbackType } from "@/components/Feedback";
+import { Feedback, FeedbackType } from "@/app/components/Feedback";
 import {
   validatePassword,
   validateConfirmPassword,
-} from "@/utils/passwordValidation"; // Import validation functions
+} from "@/app/utils/passwordValidation"; // Import validation functions
 
 const Signup = () => {
   const [isDisabled, setIsDisabled] = useState<boolean>(false);

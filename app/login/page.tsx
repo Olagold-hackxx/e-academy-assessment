@@ -1,8 +1,8 @@
 "use client";
 
-import Input from "@/components/Input";
-import PasswordInput from "@/components/PasswordInput";
-import Oauth from "@/components/Oauth";
+import Input from "@/app/components/Input";
+import PasswordInput from "@/app/components/PasswordInput";
+import Oauth from "@/app/components/Oauth";
 import { useState } from "react";
 
 const Login = () => {
