@@ -23,7 +23,7 @@ const Login = () => {
             Enter your credentials to access your account
           </p>
         </div>
-        <form className="w-[80%] flex flex-col md:gap-y-[1vh] font-[530]">
+        <form className="w-[80%] flex flex-col md:gap-y-[1vh] font-medium">
           <div className="flex flex-col">
             <label className="text-[14px] text-[#101928] leading-5">
               Email Address
