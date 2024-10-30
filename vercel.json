@@ -1,12 +1,9 @@
 {
-    "rewrites": [
+    "redirects": [
         {
             "source": "/",
-            "destination": "/login"
-        },
-        {
-            "source": "/(.*)",
-            "destination": "/"
+            "destination": "/login",
+            "permanent": true
         }
     ]
 }
