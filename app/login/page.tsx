@@ -6,13 +6,13 @@ import Oauth from "@/components/Oauth";
 import { useState } from "react";
 
 const Login = () => {
-  const [isRememberMeChecked, setIsRememberMeChecked] = useState(false);
+  const [isRememberMeChecked, setIsRememberMeChecked] = useState<boolean>(false);
 
   const handleRememberMeChange = () => {
     setIsRememberMeChecked(!isRememberMeChecked);
   };
   return (
-    <div className="bg-[#F7F9FC] h-screen w-screen grid place-content-center md:content-center content-start">
+    <div className="bg-[#F7F9FC] h-screen w-screen grid place-content-center md:content-center content-start font-inter">
       <div className="md:border-2 md:bg-white rounded-md text-black flex flex-col md:w-[35vw] w-[94vw] md:min-h-[76vh] md:max-h-[95vh] md:h-fit md:my-0 my-[10%] max-sm items-center md:gap-y-[2vh] gap-y-2 shadow-md shadow-[#F7F9FC]">
         <div className="md:pt-[8%] pt-[5%] md:pb-2 pb-4">
           <h1 className="font-semibold text-[28px] py-2 text-center leading-8 ">
@@ -23,7 +23,7 @@ const Login = () => {
             Enter your credentials to access your account
           </p>
         </div>
-        <form className="w-[80%] flex flex-col md:gap-y-[1vh] font-medium">
+        <form className="w-[80%] flex flex-col md:gap-y-[1vh] font-[530]">
           <div className="flex flex-col">
             <label className="text-[14px] text-[#101928] leading-5">
               Email Address

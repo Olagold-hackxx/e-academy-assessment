@@ -1,44 +1,59 @@
+"use client";
+
 import Image from "next/image";
 
-// interface FeedbackProps {
-//     warning: string,
-//     success: string,
-//     error: string,
-// }
+export type FeedbackType = "warning" | "success" | "error";
 
-const Feedback = ({ message }: { message: string }) => {
-  const feedbackBgColor: any = {
-    warning: "bg-[#FEF6E7]",
-    success: "bg-[#E7F6EC]",
-    error: "bg-[#FBEAE9]",
+interface FeedbackProps {
+  feedback: FeedbackType;
+}
+
+export const Feedback = ({ feedback }: FeedbackProps) => {
+  const feedbackBgColor: Record<FeedbackType, string> = {
+    "warning": "bg-[#FEF6E7]",
+    "success": "bg-[#E7F6EC]",
+    "error": "bg-[#FBEAE9]",
   };
 
-  const feedbackTextColor: any = {
+  const feedbackTextColor: Record<FeedbackType, string> = {
     error: "text-[#CB1A14]",
     warning: "text-[#AD6F07]",
     success: "text-[#099137]",
   };
 
-  const feedbackIcon: any = {
-    warning: "",
-    success: "",
-    error: "",
+  const feedbackIcon: Record<FeedbackType, string> = {
+    warning: "/warning.png",
+    success: "/success.png",
+    error: "/error.png",
   };
+
+  const getFeedbackMessage = () => {
+    switch (feedback) {
+      case "warning":
+        return "Password must be at least 8 characters and include a special character.";
+      case "success":
+        return "Password meets all requirements!";
+      case "error":
+        return "Passwords do not match.";
+      default:
+        return "";
+    }
+  };
+
   return (
     <div
-      className={`${feedbackBgColor[message]} flex justify-start  items-center w-full border rounded-md h-[44px]`}
+      className={`${feedbackBgColor[feedback]} flex justify-start items-center w-full border rounded-md min-h-[44px] h-fit p-2`}
     >
       <Image
-        src={feedbackIcon[message]}
-        alt="alert icon"
-        height="13.33"
-        width="13.33"
+        src={feedbackIcon[feedback]}
+        alt={`${feedback} icon`}
+        height={16}
+        width={16}
+        className="min-w-[7%]"
       />
-      <span className={`${feedbackTextColor[message]} `}>
-        A placeholder for alerts
+      <span className={`ml-2 ${feedbackTextColor[feedback]} text-center leading-4`}>
+        {getFeedbackMessage()}
       </span>
     </div>
   );
 };
-
-export default Feedback;

@@ -7,7 +7,7 @@ interface OauthProps {
 
 const Oauth = ({ oauthImage, oauth }: OauthProps) => {
   return (
-    <button className="border border-[#D0D5DD] shadow-md shadow-[#F7F9FC] h-[55px] flex w-full gap-x-4 justify-center items-center rounded-md">
+    <button className="border text-[#344054] font-semibold border-[#D0D5DD] shadow-md shadow-[#F7F9FC] h-[55px] flex w-full gap-x-4 justify-center items-center rounded-md">
       <Image
         src={oauthImage}
         width="24"
